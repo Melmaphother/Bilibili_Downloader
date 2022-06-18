@@ -52,7 +52,7 @@ In this repository,we will get the video, audio, comments, bullet_screens and so
   - https://pypi.mirrors.ustc.edu.cn/simple/ 
 
 ## Ways of using
-  * First, you can choose a video(cannot be the video that only for VIP) in bilibili that you like (http://bilibili.com),then find the file 'main_GUI.exe' and open it.
+  * First, you can choose a video(cannot be the video only for VIP) in bilibili that you like ( http://bilibili.com ), then find the file 'main_GUI.exe' and open it.
   * Next, you should input the url or BV number here.
   * Finally, choose the config that you want. Then you can get a file folder named by video's BV number and all you need are included.
   * Illustration:
