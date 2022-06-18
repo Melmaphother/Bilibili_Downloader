@@ -1,9 +1,9 @@
 # Bilibili_Downloader
 In this repository,we will get the video, audio, comments, bullet_screens and so on in bilibili by the BV number
 
-  * Auther: Melmaphother and Polonium
+  * Authors: Melmaphother and Polonium
   * Date: 2022/5/14
-  * language: python
+  * Language: python
   * IDE: pycharm
   * Interpreter: python 3.9.13
  
