@@ -1,18 +1,5 @@
-# !/usr/bin/python
-# -*- coding:utf-8 -*-
-# time: 2019/07/02--08:12
-__author__ = 'Henry'
 
 import output
-
-'''
-项目: B站视频下载 - 多线程下载
-
-版本1: 加密API版,不需要加入cookie,直接即可下载1080p视频
-
-20190422 - 增加多P视频单独下载其中一集的功能
-20190702 - 增加视频多线程下载 速度大幅提升
-'''
 
 import requests, time, hashlib, urllib.request, re, json
 from moviepy.editor import *
@@ -147,39 +134,6 @@ def down_video(video_list, title, start_url, page , bv):
         num += 1
 
 
-# 合并视频(20190802新版)
-'''
-def combine_video(title_list):
-    video_path = os.path.join(sys.path[0], 'bilibili_video')  # 下载目录
-    for title in title_list:
-        current_video_path = os.path.join(video_path, title)
-        if len(os.listdir(current_video_path)) >= 2:
-            # 视频大于一段才要合并
-            print('[下载完成,正在合并视频...]:' + title)
-            # 定义一个数组
-            L = []
-            # 遍历所有文件
-            for file in sorted(os.listdir(current_video_path), key=lambda x: int(x[x.rindex("-") + 1:x.rindex(".")])):
-                # 如果后缀名为 .mp4/.flv
-                if os.path.splitext(file)[1] == '.flv':
-                    # 拼接成完整路径
-                    filePath = os.path.join(current_video_path, file)
-                    # 载入视频
-                    video = VideoFileClip(filePath)
-                    # 添加到数组
-                    L.append(video)
-            # 拼接视频
-            final_clip = concatenate_videoclips(L)
-            # 生成目标视频文件
-            final_clip.to_videofile(os.path.join(current_video_path, r'{}.mp4'.format(title)), fps=24,
-                                    remove_temp=False)
-            print('[视频合并完成]' + title)
-        else:
-            # 视频只有一段则直接打印下载完成
-            print('[视频合并完成]:' + title)
-
-'''
-
 
 # if __name__ == '__main__':
 def download(start,quality):
@@ -243,12 +197,8 @@ def download(start,quality):
         th.start()
 
     # 等待所有线程运行完毕
-    for th in threadpool:
+    for th in threadpool:s
         th.join()
-
-    # 最后合并视频
-    # print(title_list)
-    #combine_video(title_list)
 
     # end_time = time.time()  # 结束时间
     # print('下载总耗时%.2f秒,约%.2f分钟' % (end_time - start_time, int(end_time - start_time) / 60))
@@ -258,5 +208,3 @@ def download(start,quality):
         os.startfile(currentVideoPath)
     return 1
 
-# 分P视频下载测试: https://www.bilibili.com/video/av19516333/
-# 下载总耗时14.21秒,约0.23分钟
