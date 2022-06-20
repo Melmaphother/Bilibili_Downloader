@@ -12,7 +12,7 @@ In this repository,we will get the video, audio, comments, bullet_screens and so
   * There are also some other functions waiting for you!
 
 ## Environment
-  ####   Packages:
+  #### Packages:
   <details><summary>     Click This</summary>
   This project uses these libraries:
   
@@ -46,7 +46,7 @@ In this repository,we will get the video, audio, comments, bullet_screens and so
     - wordcloud               1.8.1	
   </details>
   
-  ####   Repositories:
+  #### Repositories:
   
   - https://pypi.python.org/simple 
   - https://pypi.mirrors.ustc.edu.cn/simple/ 
@@ -55,12 +55,8 @@ In this repository,we will get the video, audio, comments, bullet_screens and so
   * First, you can choose a video(cannot be the video only for VIP) in bilibili that you like ( http://bilibili.com ), then find the file 'main_GUI.exe' and open it.
   * Next, you should input the url or BV number here.
   * Finally, choose the config that you want. Then you can get a file folder named by video's BV number and all you need are included.
-  * Illustration:
-    * 1
-    * 2
-## Test Sample
+  * Illustration:All your results are downloaded in the new file folder we will create for you and locate in the project file. You should just check the results by clicking into 'output', then you will find some file folders named by the BV numbers,       find the BV number you have inputed and you can find what you want.
   
-## Quote
 
 
 
